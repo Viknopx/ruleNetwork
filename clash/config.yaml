@@ -40,18 +40,12 @@ proxy-groups:
     use:
       - "高速机场"
     proxies:
-      - "自动选择"
-      - "节点选择"
-      - "手动切换"
       - DIRECT
   - name: "手动采集"
     type: select
     use:
       - "手动提取"
     proxies:
-      - "自动选择"
-      - "节点选择"
-      - "手动切换"
       - DIRECT
   - name: game-rule
     type: select
