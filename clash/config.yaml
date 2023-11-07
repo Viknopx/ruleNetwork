@@ -19,6 +19,8 @@ proxy-groups:
     proxies:
       - "自动选择"
       - "ss.lyhepj.cn-hysteria"
+      - "自动捕获"
+      - "手动采集"
       - "节点选择"
       - DIRECT
       - REJECT
@@ -26,8 +28,9 @@ proxy-groups:
     type: select
     proxies:
       - "ss.lyhepj.cn-hysteria"
-      - "自动捕获"
-      - "手动采集"
+    use:
+      - "手动提取"
+      - "高速机场"
   - name: steam-rule
     type: select
     proxies:
@@ -36,64 +39,66 @@ proxy-groups:
       - "自动选择"
       - DIRECT
   - name: "自动捕获"
-    type: select
     use:
       - "高速机场"
-    proxies:
-      - DIRECT
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
   - name: "手动采集"
-    type: select
     use:
       - "手动提取"
-    proxies:
-      - DIRECT
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
   - name: game-rule
     type: select
     proxies:
-      - "节点选择"
       - "手动切换"
+      - "节点选择"
       - "自动选择"
       - DIRECT
   - name: Pxy-rule
     type: select
     proxies:
-      - "节点选择"
       - "手动切换"
+      - "节点选择"
       - "自动选择"
       - DIRECT
   - name: GlobalMedia-rule
     type: select
     proxies:
-      - "节点选择"
       - "手动切换"
+      - "节点选择"
       - "自动选择"
       - DIRECT
   - name: TikTok-rule
     type: select
     proxies:
-      - "节点选择"
       - "手动切换"
+      - "节点选择"
       - "自动选择"
       - DIRECT
   - name: Cloudflare-rule
     type: select
     proxies:
-      - "节点选择"
       - "手动切换"
+      - "节点选择"
       - "自动选择"
       - DIRECT
   - name: Developer-rule
     type: select
     proxies:
-      - "节点选择"
       - "手动切换"
+      - "节点选择"
       - "自动选择"
       - DIRECT
   - name: "漏网之鱼"
     type: select
     proxies:
-      - "节点选择"
       - "手动切换"
+      - "节点选择"
       - "自动选择"
       - DIRECT
 rule-providers:
@@ -215,13 +220,14 @@ rules:
   - RULE-SET,custom,DIRECT
   - RULE-SET,DirectList,DIRECT
   - RULE-SET,steamCN,DIRECT
+  - DOMAIN-SUFFIX,jsdelivr.net,DIRECT
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - RULE-SET,customPxy,Pxy-rule
   - RULE-SET,steam,steam-rule
   - RULE-SET,GameAll,game-rule
   - RULE-SET,github,Pxy-rule
   - RULE-SET,microsoft,Pxy-rule
   - RULE-SET,GlobalMedia,GlobalMedia-rule
-  - RULE-SET,customPxy,Pxy-rule
   - RULE-SET,PxyList,Pxy-rule
   - RULE-SET,TikTok,TikTok-rule
   - RULE-SET,Cloudflare,Cloudflare-rule
