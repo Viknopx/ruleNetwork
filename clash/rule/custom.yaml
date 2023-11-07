@@ -6,4 +6,7 @@
 # DOMAIN-SUFFIX: 29
 # TOTAL: 30
 payload:
-  - DOMAIN-SUFFIX,atom.io
+  - DOMAIN-SUFFIX,lyhepj.cn
+  - IP-CIDR,100.100.0.0/16
+  - IP-CIDR,10.101.0.0/16
+  - IP-CIDR,10.100.0.0/16

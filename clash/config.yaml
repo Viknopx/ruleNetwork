@@ -103,9 +103,9 @@ rule-providers:
     interval: 86400
   AdvertisingLite:
     type: http
-    behavior: domain
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain_For_Clash.txt
-    path: "./rule_provider/AdvertisingLite_Domain_For_Clash.yaml"
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml
+    path: "./rule_provider/AdvertisingLite_Classical.yaml"
     interval: 86400
   lan:
     type: http
