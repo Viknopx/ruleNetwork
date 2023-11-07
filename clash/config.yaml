@@ -26,8 +26,28 @@ proxy-groups:
     type: select
     proxies:
       - "ss.lyhepj.cn-hysteria"
+      - "自动捕获"
+      - "手动采集"
   - name: steam-rule
     type: select
+    proxies:
+      - "自动选择"
+      - "节点选择"
+      - "手动切换"
+      - DIRECT
+  - name: "自动捕获"
+    type: select
+    use:
+      - "高速机场"
+    proxies:
+      - "自动选择"
+      - "节点选择"
+      - "手动切换"
+      - DIRECT
+  - name: "手动采集"
+    type: select
+    use:
+      - "手动提取"
     proxies:
       - "自动选择"
       - "节点选择"

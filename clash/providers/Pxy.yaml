@@ -1,0 +1,3 @@
+proxies:
+  - {name: Telegram@AiLuMao, server: www.lp-airdrop.top, port: 12580, type: vmess, uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
+  - {name: 🇸🇬 SG1-2, server: api2.lp-airdrop.top, port: 11112, type: vmess, uuid: fc562532-1c11-4367-89e7-b2509e4f936a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
