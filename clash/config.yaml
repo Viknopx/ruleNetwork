@@ -1,0 +1,145 @@
+#https://github.com/blackmatrix7/ios_rule_scrip
+---
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: silent
+external-controller: 0.0.0.0:9090
+proxies:
+- name: "ss.lyhepj.cn-hysteria"
+  type: hysteria
+  server: 43.129.183.176
+  ports: 46666-47777
+  auth_str: xll52177
+  alpn:
+  - h3
+  protocol: udp
+  up: 66
+  down: 66
+  sni: ss.lyhepj.cn
+  skip-cert-verify: false
+  recv_window_conn: 2097152
+  recv_window: 8388608
+  disable_mtu_discovery: true
+  fast-open: true
+
+proxy-groups:
+- name: steam-rule
+  type: select
+  proxies:
+  - "自动选择"
+  - "节点选择"
+  - "手动切换"
+  - DIRECT
+- name: game-rule
+  type: select
+  proxies:
+  - "自动选择"
+  - "节点选择"
+  - "手动切换"
+  - DIRECT
+- name: proxy-rule
+  type: select
+  proxies:
+  - "自动选择"
+  - "节点选择"
+  - "手动切换"
+  - DIRECT
+- name: youtube-rule
+  type: select
+  proxies:
+  - "自动选择"
+  - "节点选择"
+  - "手动切换"
+  - DIRECT
+
+
+rule-providers:
+  steam:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml
+    path: "./rule_provider/steam.yaml"
+    interval: 86400
+  steamCN:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml
+    path: "./rule_provider/steamCN.yaml"
+    interval: 86400
+  GameAll:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml
+    path: "./rule_provider/GameAll.yaml"
+    interval: 86400
+  AdvertisingLite:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain_For_Clash.txt
+    path: "./rule_provider/AdvertisingLite_Domain_For_Clash.yaml"
+    interval: 86400
+  lan:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml
+    path: "./rule_provider/lan.yaml"
+    interval: 86400
+  download:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml
+    path: "./rule_provider/download.yaml"
+    interval: 86400
+  github:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
+    path: "./rule_provider/guthub.yaml"
+    interval: 86400   
+  microsoft:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
+    path: "./rule_provider/microsoft.yaml"
+    interval: 86400   
+  google:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
+    path: "./rule_provider/google.yaml"
+    interval: 86400   
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
+    path: "./rule_provider/YouTube.yaml"
+    interval: 86400   
+  china:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical_No_IPv6.yaml
+    path: "./rule_provider/china.yaml"
+    interval: 86400       
+
+
+rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,steam,steam-rule
+- RULE-SET,GameAll,game-rule
+- RULE-SET,steamCN,DIRECT
+- RULE-SET,AdvertisingLite,REJECT
+- RULE-SET,lan,DIRECT
+- RULE-SET,github,proxy-rule
+- RULE-SET,microsoft,proxy-rule
+- RULE-SET,YouTube,youtube-rule
+- RULE-SET,lan,proxy-rule
+- RULE-SET,lan,proxy-rule
+- RULE-SET,china,DIRECT
+- RULE-SET,lan,DIRECT
+- RULE-SET,lan,DIRECT
+- RULE-SET,lan,DIRECT
+- RULE-SET,lan,DIRECT
