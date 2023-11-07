@@ -7,6 +7,7 @@
 # TOTAL: 30
 payload:
   - DOMAIN-SUFFIX,lyhepj.cn
+  - DOMAIN-SUFFIX,jsdelivr.net
   - IP-CIDR,100.100.0.0/16
   - IP-CIDR,10.101.0.0/16
   - IP-CIDR,10.100.0.0/16
