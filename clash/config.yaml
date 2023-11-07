@@ -17,9 +17,9 @@ proxy-groups:
   - name: "手动切换"
     type: select
     proxies:
+      - "自动选择"
       - "ss.lyhepj.cn-hysteria"
       - "节点选择"
-      - "自动选择"
       - DIRECT
       - REJECT
   - name: "节点选择"
@@ -31,9 +31,9 @@ proxy-groups:
   - name: steam-rule
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
   - name: "自动捕获"
     type: select
@@ -50,51 +50,51 @@ proxy-groups:
   - name: game-rule
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
   - name: Pxy-rule
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
   - name: GlobalMedia-rule
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
   - name: TikTok-rule
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
   - name: Cloudflare-rule
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
   - name: Developer-rule
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
   - name: "漏网之鱼"
     type: select
     proxies:
-      - "自动选择"
       - "节点选择"
       - "手动切换"
+      - "自动选择"
       - DIRECT
 rule-providers:
   steam:
@@ -210,6 +210,7 @@ rules:
   - DST-PORT,7892,REJECT
   - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,lan,DIRECT
+  - RULE-SET,download,DIRECT
   - RULE-SET,china,DIRECT
   - RULE-SET,custom,DIRECT
   - RULE-SET,DirectList,DIRECT
