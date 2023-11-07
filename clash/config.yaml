@@ -194,20 +194,20 @@ rule-providers:
 rules:
   - DST-PORT,7895,REJECT
   - DST-PORT,7892,REJECT
+  - RULE-SET,AdvertisingLite,REJECT
+  - RULE-SET,lan,DIRECT
+  - RULE-SET,china,DIRECT
+  - RULE-SET,custom,DIRECT
+  - RULE-SET,DirectList,DIRECT
+  - RULE-SET,steamCN,DIRECT
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - RULE-SET,steam,steam-rule
   - RULE-SET,GameAll,game-rule
-  - RULE-SET,steamCN,DIRECT
-  - RULE-SET,AdvertisingLite,REJECT
-  - RULE-SET,lan,DIRECT
   - RULE-SET,github,proxy-rule
   - RULE-SET,microsoft,proxy-rule
   - RULE-SET,GlobalMedia,GlobalMedia-rule
   - RULE-SET,customProxy,proxy-rule
   - RULE-SET,ProxyList,proxy-rule
-  - RULE-SET,china,DIRECT
-  - RULE-SET,custom,DIRECT
-  - RULE-SET,DirectList,DIRECT
   - RULE-SET,TikTok,TikTok-rule
   - RULE-SET,Cloudflare,Cloudflare-rule
   - RULE-SET,Developer,Developer-rule
