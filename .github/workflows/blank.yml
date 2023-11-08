@@ -34,6 +34,5 @@ jobs:
         run: |
           echo "${{ env.DAFAULT_PROXY }}
           echo "${DAFAULT_PROXY}
-          echo "${{ default_env.DAFAULT_PROXY }}
           echo Add other actions to build,
           echo test, and deploy your project.
