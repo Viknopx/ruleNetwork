@@ -1,0 +1,132 @@
+
+proxies:
+  - name: "SED_HK_PROXY_NAME"
+    type: hysteria
+    server: SED_HK_PROXY_SERVER
+    ports: 46666-47777
+    auth_str: "SED_HK_PROXY_SECRETS"
+    alpn:
+      - h3
+    protocol: udp
+    up: 66
+    down: 66
+    sni: ss.lyhepj.cn
+    skip-cert-verify: false
+    recv_window_conn: 2097152
+    recv_window: 8388608
+    disable_mtu_discovery: true
+    fast-open: true
+proxy-providers:
+  "高速机场":
+    type: http
+    url: "https://proxy.yugogo.xyz/clash/proxies?c=CN&speed=1900000"
+    interval: 86400
+    path: ./providers/speed-pxy.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  "手动提取":
+    type: http
+    url: "https://cdn.jsdelivr.net/gh/Viknopx/ruleNetwork@main/clash/providers/Pxy.yaml"
+    interval: 86400
+    path: ./providers/custom-pxy.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  "精选代理":
+    type: http
+    url: "https://cdn.jsdelivr.net/gh/Viknopx/ruleNetwork@main/clash/providers/Pro.yaml"
+    interval: 86400
+    path: ./providers/custom-pro.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 10080
+bind-address: "*"
+secret: xll52177
+external-ui: "/usr/share/openclash/ui"
+ipv6: false
+geodata-loader: standard
+tcp-concurrent: true
+find-process-mode: always
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+  - 223.5.5.5
+  - 8.8.8.8
+  - 192.168.31.1
+  - 119.29.29.29
+  - 119.28.28.28
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://dns.cloudflare.com/dns-query
+  - tls://dns.google:853
+  - https://1.1.1.1/dns-query
+  - tls://1.1.1.1:853
+  - "[2001:4860:4860::8888]:53"
+  - https://jp.tiar.app/dns-query
+  - https://jp.tiarap.org/dns-query
+  - tls://jp.tiar.app
+  - tls://dot.tiar.app
+  - tcp://208.67.220.220
+  - tcp://208.67.222.222
+  default-nameserver:
+  - 223.5.5.5
+  - 8.8.8.8
+  - 192.168.31.1
+  - 119.29.29.29
+  - 119.28.28.28
+  - https://1.1.1.1/dns-query
+  - tls://1.1.1.1:853
+  - "[2001:4860:4860::8888]:53"
+  - tcp://208.67.220.220
+  - tcp://208.67.222.222
+  proxy-server-nameserver:
+  - 223.5.5.5
+  - 8.8.8.8
+  - tcp://208.67.220.220
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    - "+.githubusercontent.com"
+    - "+.googlevideo.com"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - msftconnecttest.com
+    - msftncsi.com
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+profile:
+  store-selected: true
