@@ -13,7 +13,9 @@ payload:
   - IP-CIDR,10.100.0.0/16
   - DST-PORT,3478
   - DST-PORT,22000
-  #steam
+  #steam识别为中国
+
+  
   - DOMAIN-SUFFIX,api.steampowered.com
   - DOMAIN-SUFFIX,cm.steampowered.com
   - DOMAIN-SUFFIX,steamserver.net
