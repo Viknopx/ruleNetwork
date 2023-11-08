@@ -25,8 +25,9 @@ jobs:
     environment: default_env
     env:
       HK_PROXY_NAME: ${{ vars.HK_PROXY_NAME }}
-      HK_PROXY_SERVER: ${{ secrets.HK_PROXY_SERVER }}
-      HK_PROXY_SECRETS: ${{ secrets.HK_PROXY_SECRETS }}
+      HK_PROXY_SERVER: ${{ vars.HK_PROXY_SERVER }}
+      HK_PROXY_SECRETS: ${{ vars.HK_PROXY_SECRETS }}
+      HK_PROXY: ${{ vars.HK_PROXY }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
