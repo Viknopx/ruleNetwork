@@ -1,21 +1,6 @@
 
 proxies:
-  - name: "SED_HK_PROXY_NAME"
-    type: hysteria
-    server: SED_HK_PROXY_SERVER
-    ports: 46666-47777
-    auth_str: "SED_HK_PROXY_SECRETS"
-    alpn:
-      - h3
-    protocol: udp
-    up: 66
-    down: 66
-    sni: ss.lyhepj.cn
-    skip-cert-verify: false
-    recv_window_conn: 2097152
-    recv_window: 8388608
-    disable_mtu_discovery: true
-    fast-open: true
+
 proxy-providers:
   "高速机场":
     type: http
