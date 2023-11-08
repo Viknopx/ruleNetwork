@@ -40,10 +40,9 @@ jobs:
       - name: Clash合成
         run: |
           sed -i 's#SED_HK_PROXY_NAME#${{ vars.HK_PROXY_NAME }}#g' clash/proxy_temp.yaml
-          sed -i 's#SED_HK_PROXY_SERVER#${{ vars.HK_PROXY_SERVER }}#g' clash/proxy_temp.yaml
-          sed -i 's#SED_HK_PROXY_NAME#${{ vars.HK_PROXY_SECRETS }}#g' clash/proxy_temp.yaml
+          sed -i 's#SED_HK_PROXY_SERVER#${{ secrets.HK_PROXY_SERVER }}#g' clash/proxy_temp.yaml
+          sed -i 's#SED_HK_PROXY_NAME#${{ secrets.HK_PROXY_SECRETS }}#g' clash/proxy_temp.yaml
 
-          echo - {"name":"${{ vars.HK_PROXY_NAME }}","${{ secrets.HK_PROXY }}"} > tmp
           cat clash/proxy_temp.yaml clash/config_rule.yaml > clash.yaml
 
           cat clash.yaml
