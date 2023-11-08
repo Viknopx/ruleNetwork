@@ -40,7 +40,7 @@ jobs:
           echo "${{ env.default_proxy }}"
           echo Add other actions to build,
           echo $GITHUB_RUN_ID
-          echo ${{ default_env.HK_PROXY }}
+          echo ${{ env.HK_PROXY }}
           echo $HK_PROXY
           echo test, and deploy your project.
           
