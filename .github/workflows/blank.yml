@@ -37,7 +37,7 @@ jobs:
           curl -s https://purge.jsdelivr.net/gh/Viknopx/ruleNetwork@main/clash/providers/Pxy.yaml
 
       # Runs a set of commands using the runners shell
-      - name: Clash.yaml
+      - name: Clash合成
         run: |
           sed -i 's#SED_HK_PROXY_NAME#${{ vars.HK_PROXY_NAME }}#g' clash/proxy_temp.yaml
           sed -i 's#SED_HK_PROXY_SERVER#${{ vars.HK_PROXY_SERVER }}#g' clash/proxy_temp.yaml
