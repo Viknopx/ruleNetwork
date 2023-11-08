@@ -12,6 +12,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+env:
+  env_var: ${{ default_env.default_proxy }}
+  env_proxy: ${{ default_proxy }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -42,6 +45,8 @@ jobs:
           echo $GITHUB_RUN_ID
           echo ${{ env.HK_PROXY }}
           echo $HK_PROXY
+          echo $env_var
+          echo $env_proxy
           echo test, and deploy your project.
           
           env
