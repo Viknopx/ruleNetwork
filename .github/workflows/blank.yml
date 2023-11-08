@@ -12,8 +12,7 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-env:
-  env_var: what
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,6 +23,10 @@ jobs:
 
     #使用默认环境
     environment: default_env
+
+    env:
+      proxy:   '- {"name":"ss.lyhepj.cn-hysteria",}'
+
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -37,18 +40,5 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo "${{ secrets.DAFAULT_PROXY }}"
-          echo "${DAFAULT_PROXY}"
-          echo "$DAFAULT_PROXY"
-          echo "$default_proxy"
-          echo "${default_proxy}"
-          echo "${{ env.default_proxy }}"
-          echo Add other actions to build,
-          echo $GITHUB_RUN_ID
-          echo ${{ vars.HK_PROXY }}
-          echo $HK_PROXY
-          echo $env_var
-          echo $env_proxy
-          echo test, and deploy your project.
-          
-          env
+          echo '- {"name":"${{ vars.HK_PROXY_NAME }}",${{ secrets.HK_PROXY }}}'
+
