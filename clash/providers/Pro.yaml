@@ -1,2 +1,1 @@
 proxies:
-  - {"name":"ss.lyhepj.cn-hysteria","type":"hysteria","server":"43.129.183.176","sni":"ss.lyhepj.cn","skip-cert-verify":false,"alpn":["h3"],"protocol":"udp","auth_str":"xll52177","up":66,"down":66,"recv_window":8388608,"recv_window_conn":2097152,"disable_mtu_discovery":true,"fast-open":true}
