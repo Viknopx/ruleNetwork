@@ -24,11 +24,10 @@ jobs:
     #使用默认环境
     environment: default_env
     env:
-      HK_PROXY_NAME: ${{ vars.HK_PROXY_NAME }}
-      HK_PROXY_SERVER: ${{ vars.HK_PROXY_SERVER }}
-      HK_PROXY_SECRETS: ${{ vars.HK_PROXY_SECRETS }}
       HK_PROXY: ${{ vars.HK_PORXY }}
-
+      SEND_TOKEN: ${{ vars.SEND_TOKEN }}
+      SEND_SERVER: ${{ vars.SEND_SERVER }}
+      
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
