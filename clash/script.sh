@@ -3,12 +3,12 @@
 
 
 SEND_TITLE="Clash配置更新"
-SEND_MESSAGE="$HK_PROXY \n更新完成。"
+SEND_MESSAGE="`date` \n更新完成。\nhttps://ops-software.$RCLONE_EP/temp/clash.yaml"
 
 
 sed -i '/proxies:/a\'"${HK_PROXY}"'' proxy_temp.yaml
-sed -i 's#secret:.*#secret: '"$TOKEN"'#g' 
-cat proxy_temp.yaml config_rule.yaml >clash.yaml
+sed -i 's#secret:.*#secret: '"$TOKEN"'#g' proxy_temp.yaml
+cat proxy_temp.yaml config_rule.yaml > clash.yaml
 
 
 
@@ -20,7 +20,7 @@ curl -s "$SEND_SERVER/message?token=$SEND_TOKEN" -F "title=$SEND_TITLE" -F "mess
 echo "同步配置"
 {
 mkdir -p ~/.config/rclone/
-wget https://github.com/rclone/rclone/releases/download/v1.64.2/rclone-v1.64.2-linux-amd64.zip > /dev/null
+wget -qc https://github.com/rclone/rclone/releases/download/v1.64.2/rclone-v1.64.2-linux-amd64.zip 
 unzip rclone-v1.64.2-linux-amd64.zip 
 chmod 777 -R rclone-v1.64.2-linux-amd64
 envsubst < ../rclone.conf > ~/.config/rclone/rclone.conf 

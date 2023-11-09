@@ -27,6 +27,8 @@ proxy-groups:
       - "手动提取"
       - "高速机场"
       - "精选节点"
+      - free_proxy_ss
+      - freefq
   - name: steam-rule
     type: select
     proxies:

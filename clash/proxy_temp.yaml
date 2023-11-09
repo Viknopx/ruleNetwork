@@ -29,6 +29,26 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+  free_proxy_ss:
+    type: http
+    url: "https://cdn.jsdelivr.net/gh/learnhard-cn/free_proxy_ss@main/clash/clash.provider.yaml"
+    interval: 86400
+    path: ./providers/free_proxy_ss.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  freefq:
+    type: http
+    url: "https://sub.xeton.dev/sub?target=clash&new_name=true&url=https%3A%2F%2Fbulinkbulink.com%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&tfo=false&scv=false&fdn=true&sort=false"
+    interval: 86400
+    path: ./providers/freefq.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  
 redir-port: 7892
 tproxy-port: 7895
 mixed-port: 10080
