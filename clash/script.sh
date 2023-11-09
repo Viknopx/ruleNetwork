@@ -19,7 +19,11 @@ curl -s "$SEND_SERVER/message?token=$SEND_TOKEN" -F "title=$SEND_TITLE" -F "mess
 echo "同步配置"
 mkdir -p ~/.config/rclone/
 
-wget https://github.com/rclone/rclone/releases/download/v1.64.2/rclone-v1.64.2-linux-amd64.rpm
-rpm -ih  rclone-v1.64.2-linux-amd64.rpm
+wget https://github.com/rclone/rclone/releases/download/v1.64.2/rclone-v1.64.2-linux-amd64.zip
+unzip rclone-v1.64.2-linux-amd64.zip
+
+chmod 777 -R rclone-v1.64.2-linux-amd64
+
 envsubst < ../rclone.conf > ~/.config/rclone/rclone.conf 
-rclone copy clash.yaml rclone:ops-software:/temp
+
+rclone-v1.64.2-linux-amd64/rclone copy clash.yaml rclone:ops-software:/temp
