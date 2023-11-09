@@ -7,7 +7,7 @@ proxy-groups:
     proxies:
       - "default-ss-hk"
     use:
-      - "精选节点"
+      - "精选代理"
   - name: "手动切换"
     type: select
     proxies:
