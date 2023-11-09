@@ -17,6 +17,9 @@ curl "$SEND_SERVER/message?token=$SEND_TOKEN" -F "title=$SEND_TITLE" -F "message
 
 
 echo "同步配置"
-apt install rclone -y
+mkdir -p ~/.config/rclone/
+
+wget https://github.com/rclone/rclone/releases/download/v1.64.2/rclone-v1.64.2-linux-amd64.rpm
+rpm -ih -y rclone-v1.64.2-linux-amd64.rpm
 envsubst < ../rclone.conf > ~/.config/rclone/rclone.conf 
 rclone copy clash.yaml rclone:ops-software:/temp
