@@ -1,4 +1,6 @@
 proxies:
+  - {name: Telegram@AiLuMao, server: www.lp-airdrop.top, port: 12580, type: vmess, uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
+  - {name: 🇸🇬 SG1-2, server: api2.lp-airdrop.top, port: 11112, type: vmess, uuid: fc562532-1c11-4367-89e7-b2509e4f936a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
   - {name: 🇺🇲 美国 加利福尼亚州洛杉矶市Coperation Coloction数据中心, server: 172.247.148.93, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, network: ws, ws-opts: {path: /path/133527190814}}
   - {name: 🇭🇰 香港 阿里云, server: n1698119642.izwhvan.cn, port: 443, type: vmess, uuid: fe57e1f2-704b-4896-92b6-c256737e9739, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /, headers: {Host: n1698119642.izwhvan.cn}}}
   - {name: 🇷🇴 美国 V2CROSS.COM, server: 38.26.135.25, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, network: ws, ws-opts: {path: /path/1697980101249, headers: {Host: www.39838266.xyz}}}

@@ -33,7 +33,7 @@ redir-port: 7892
 tproxy-port: 7895
 mixed-port: 10080
 bind-address: "*"
-secret: xll52177
+secret: 123456
 external-ui: "/usr/share/openclash/ui"
 ipv6: false
 geodata-loader: standard

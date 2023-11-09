@@ -25,11 +25,14 @@ jobs:
     environment: default_env
     env:
       HK_PROXY: ${{ vars.HK_PORXY }}
+      TOKEN: ${{ vars.TOKEN }}
       SEND_TOKEN: ${{ vars.SEND_TOKEN }}
       SEND_SERVER: ${{ vars.SEND_SERVER }}
       RCLONE_AK: ${{ vars.RCLONE_AK }}
       RCLONE_SK: ${{ vars.RCLONE_SK }}
       RCLONE_EP: ${{ vars.RCLONE_EP }}
+
+      
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -42,6 +45,7 @@ jobs:
           curl -s https://purge.jsdelivr.net/gh/Viknopx/ruleNetwork@main/clash/rule/custom.yaml
           curl -s https://purge.jsdelivr.net/gh/Viknopx/ruleNetwork@main/clash/rule/customPxy.yaml
           curl -s https://purge.jsdelivr.net/gh/Viknopx/ruleNetwork@main/clash/providers/Pxy.yaml
+          curl -s https://purge.jsdelivr.net/gh/Viknopx/ruleNetwork@main/clash/providers/Pro.yaml
 
       # Runs a set of commands using the runners shell
       - name: Clash合成

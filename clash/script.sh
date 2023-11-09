@@ -7,6 +7,7 @@ SEND_MESSAGE="$HK_PROXY \n更新完成。"
 
 
 sed -i '/proxies:/a\'"${HK_PROXY}"'' proxy_temp.yaml
+sed -i 's#secret:.*#secret: '"$TOKEN"'#g' 
 cat proxy_temp.yaml config_rule.yaml >clash.yaml
 
 
@@ -26,3 +27,5 @@ envsubst < ../rclone.conf > ~/.config/rclone/rclone.conf
 }
 
 rclone-v1.64.2-linux-amd64/rclone copy clash.yaml rclone:ops-software/temp
+mv clash.yaml clash.txt
+rclone-v1.64.2-linux-amd64/rclone copy clash.txt rclone:ops-software/temp
