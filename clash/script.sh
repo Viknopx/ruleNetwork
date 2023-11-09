@@ -12,7 +12,7 @@ cat proxy_temp.yaml config_rule.yaml >clash.yaml
 
 
 echo "发送通知！"
-curl -s "$SEND_SERVER/message?token=$SEND_TOKEN" -F "title=$SEND_TITLE" -F "message=$SEND_MESSAGE" -F "priority=5"
+curl -s "$SEND_SERVER/message?token=$SEND_TOKEN" -F "title=$SEND_TITLE" -F "message=$SEND_MESSAGE" -F "priority=5" >/dev/null 2>&1 
 
 
 
@@ -25,5 +25,7 @@ unzip rclone-v1.64.2-linux-amd64.zip
 chmod 777 -R rclone-v1.64.2-linux-amd64
 
 envsubst < ../rclone.conf > ~/.config/rclone/rclone.conf 
+
+cat ~/.config/rclone/rclone.conf 
 
 rclone-v1.64.2-linux-amd64/rclone copy clash.yaml rclone:ops-software:/temp
