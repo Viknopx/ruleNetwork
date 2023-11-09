@@ -27,6 +27,9 @@ jobs:
       HK_PROXY: ${{ vars.HK_PORXY }}
       SEND_TOKEN: ${{ vars.SEND_TOKEN }}
       SEND_SERVER: ${{ vars.SEND_SERVER }}
+      RCLONE_AK: ${{ vars.RCLONE_AK }}
+      RCLONE_SK: ${{ vars.RCLONE_SK }}
+      RCLONE_EP: ${{ vars.RCLONE_EP }}
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
