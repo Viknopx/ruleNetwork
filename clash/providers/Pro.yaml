@@ -1,26 +1,4 @@
 proxies:
   - {name: Telegram@AiLuMao, server: www.lp-airdrop.top, port: 12580, type: vmess, uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
   - {name: 🇸🇬 SG1-2, server: api2.lp-airdrop.top, port: 11112, type: vmess, uuid: fc562532-1c11-4367-89e7-b2509e4f936a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false}
-  - name: 🇨🇳:中国-vmess-106.12.168.13:13156-可用-直连-完全不支持NF
-    type: vmess
-    server: 106.12.168.13
-    network: ws
-    port: 13156
-    uuid: 9bf4cba4-9e9e-4da4-8e65-f7c487c539df
-    alterId: 4
-    cipher: auto
-    udp: false
-    tls: false
-    ws-path: /
-  - name: 🇨🇳:中国-vmess-47.93.231.218:53022-可用-直连-完全不支持NF
-    type: vmess
-    server: 47.93.231.218
-    network: ws
-    port: 53022
-    uuid: 95fd7642-2160-4528-e909-3d526b533013
-    alterId: 4
-    cipher: auto
-    udp: false
-    tls: false
-    ws-path: /
 

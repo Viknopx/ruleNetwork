@@ -11,3 +11,5 @@ payload:
   # NAME: AppStore
   - DOMAIN,apps.apple.com
   - DOMAIN,itunes.apple.com
+  # Other
+  - DOMAIN-SUFFIX,v2rayse.com

@@ -218,6 +218,7 @@ rule-providers:
 rules:
   - DST-PORT,7895,REJECT
   - DST-PORT,7892,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - RULE-SET,AdvertisingLite,REJECT
   - RULE-SET,lan,DIRECT
   - RULE-SET,download,DIRECT
@@ -226,7 +227,6 @@ rules:
   - RULE-SET,DirectList,DIRECT
   - RULE-SET,steamCN,DIRECT
   - DOMAIN-SUFFIX,jsdelivr.net,DIRECT
-  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - RULE-SET,customPxy,Pxy-rule
   - RULE-SET,steam,steam-rule
   - RULE-SET,GameAll,game-rule

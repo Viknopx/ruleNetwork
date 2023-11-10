@@ -55,6 +55,8 @@ mixed-port: 10080
 bind-address: "*"
 secret: 123456
 external-ui: "/usr/share/openclash/ui"
+external-controller: 0.0.0.0:9090
+log-level: error
 ipv6: false
 geodata-loader: standard
 tcp-concurrent: true

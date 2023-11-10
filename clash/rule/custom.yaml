@@ -14,8 +14,6 @@ payload:
   - DST-PORT,3478
   - DST-PORT,22000
   #steam识别为中国
-
-  
   - DOMAIN-SUFFIX,api.steampowered.com
   - DOMAIN-SUFFIX,cm.steampowered.com
   - DOMAIN-SUFFIX,steamserver.net
