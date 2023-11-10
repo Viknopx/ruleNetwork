@@ -14,3 +14,5 @@ payload:
   # Other
   - DOMAIN-SUFFIX,v2rayse.com
   - DOMAIN-SUFFIX,v2ex.com
+  # 电影网站
+  - DOMAIN-SUFFIX,52xkdy.com

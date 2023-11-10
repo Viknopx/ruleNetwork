@@ -4,7 +4,7 @@ proxies:
 proxy-providers:
   "高速机场":
     type: http
-    url: "https://proxy.yugogo.xyz/clash/proxies?c=CN&speed=1900000"
+    url: "https://proxy.yugogo.xyz/clash/proxies?c=CN,HK,TW"
     interval: 86400
     path: ./providers/speed-pxy.yaml
     health-check:
@@ -31,7 +31,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   free_proxy_ss:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/learnhard-cn/free_proxy_ss@main/clash/clash.provider.yaml"
+    url: "https://free.jingfu.cf/clash/proxies?c=CN,HK,TW"
     interval: 86400
     path: ./providers/free_proxy_ss.yaml
     health-check:
@@ -47,8 +47,17 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
-
+  providers_a:
+    type: http
+    url: "http://174.137.58.32:12580/clash/proxies?c=CN,HK,TW"
+    interval: 86400
+    path: ./providers/providers_a.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
   
+
 redir-port: 7892
 tproxy-port: 7895
 mixed-port: 10080

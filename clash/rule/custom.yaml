@@ -13,9 +13,11 @@ payload:
   - IP-CIDR,10.100.0.0/16
   - DST-PORT,3478
   - DST-PORT,22000
+  - DOMAIN-SUFFIX,syncthing.net
   #暴雪游戏
   - DOMAIN-KEYWORD,blizzard
   - DOMAIN-KEYWORD,battle.net
+  - DOMAIN,blzddist1-a.akamaihd.net
   #steam识别为中国
   - DOMAIN-SUFFIX,api.steampowered.com
   - DOMAIN-SUFFIX,cm.steampowered.com
@@ -66,3 +68,15 @@ payload:
   - IP-CIDR,208.64.202.0/24
   - IP-CIDR,208.64.203.0/24
   - IP-CIDR,208.78.164.0/22
+  # > Unbreak
+  # >> Firebase Cloud Messaging
+  - DOMAIN,mtalk.google.com
+  # > Microsoft
+  - DOMAIN-SUFFIX,microsoft.com
+  - DOMAIN-SUFFIX,msecnd.net
+  - DOMAIN-SUFFIX,office365.com
+  - DOMAIN-SUFFIX,outlook.com
+  - DOMAIN-SUFFIX,visualstudio.com
+  - DOMAIN-SUFFIX,windows.com
+  - DOMAIN-SUFFIX,windowsupdate.com
+  - DOMAIN,officecdn-microsoft-com.akamaized.net

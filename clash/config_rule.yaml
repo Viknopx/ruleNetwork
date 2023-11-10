@@ -8,6 +8,12 @@ proxy-groups:
       - "default-ss-hk"
     use:
       - "精选代理"
+      - "手动提取"
+      - "高速机场"
+      - "精选代理"
+      - free_proxy_ss
+      - freefq
+      - providers_a
   - name: "手动切换"
     type: select
     proxies:
@@ -29,6 +35,7 @@ proxy-groups:
       - "精选代理"
       - free_proxy_ss
       - freefq
+      - providers_a
   - name: steam-rule
     type: select
     proxies:
