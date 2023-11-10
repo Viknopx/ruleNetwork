@@ -13,3 +13,4 @@ payload:
   - DOMAIN,itunes.apple.com
   # Other
   - DOMAIN-SUFFIX,v2rayse.com
+  - DOMAIN-SUFFIX,v2ex.com

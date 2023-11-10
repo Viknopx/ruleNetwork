@@ -13,6 +13,9 @@ payload:
   - IP-CIDR,10.100.0.0/16
   - DST-PORT,3478
   - DST-PORT,22000
+  #暴雪游戏
+  - DOMAIN-KEYWORD,blizzard
+  - DOMAIN-KEYWORD,battle.net
   #steam识别为中国
   - DOMAIN-SUFFIX,api.steampowered.com
   - DOMAIN-SUFFIX,cm.steampowered.com
