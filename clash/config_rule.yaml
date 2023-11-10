@@ -14,6 +14,7 @@ proxy-groups:
       - free_proxy_ss
       - freefq
       - providers_a
+      - providers_b
   - name: "手动切换"
     type: select
     proxies:
@@ -36,6 +37,7 @@ proxy-groups:
       - free_proxy_ss
       - freefq
       - providers_a
+      - providers_b
   - name: steam-rule
     type: select
     proxies:
