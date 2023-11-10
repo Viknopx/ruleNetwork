@@ -56,7 +56,16 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
-  
+  providers_b:
+    type: http
+    url: "https://i.lsb.one/sub/3PW3Z6O9/all"
+    interval: 86400
+    path: ./providers/providers_b.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+    
 
 redir-port: 7892
 tproxy-port: 7895
