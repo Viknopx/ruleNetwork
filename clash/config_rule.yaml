@@ -38,13 +38,6 @@ proxy-groups:
       - freefq
       - providers_a
       - providers_b
-  - name: steam-rule
-    type: select
-    proxies:
-      - "节点选择"
-      - "手动切换"
-      - "自动选择"
-      - DIRECT
   - name: "自动捕获"
     use:
       - "高速机场"
@@ -66,6 +59,13 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
+  - name: steam-rule
+    type: select
+    proxies:
+      - "手动切换"
+      - "节点选择"
+      - "自动选择"
+      - DIRECT
   - name: game-rule
     type: select
     proxies:

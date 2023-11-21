@@ -30,3 +30,5 @@ echo "同步配置"
 rclone-v1.64.2-linux-amd64/rclone copy clash.yaml rclone:ops-software/temp
 mv clash.yaml clash.txt
 rclone-v1.64.2-linux-amd64/rclone copy clash.txt rclone:ops-software/temp
+
+

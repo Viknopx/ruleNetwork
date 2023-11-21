@@ -35,3 +35,7 @@ https://ops-software.obs.cn-north-4.myhuaweicloud.com/temp/clash.yaml
 
 机场导航：
 https://52bp.org/airport.html
+
+
+刷新dns:
+sudo killall -HUP mDNSResponder; sudo dscacheutil -flushcache
